@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/* ঘূর্ণায়মান বর্ডারের কাস্টম অ্যানিমেশন */
+@keyframes spin-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-border {
+    animation: spin-border 4s linear infinite;
+}
