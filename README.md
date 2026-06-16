@@ -2,8 +2,12 @@
 
 Hireloop is a modern hiring and job portal platform. This repository contains the frontend client application built with Next.js.
 
-## Repository Link
-[https://github.com/Kabya55/hireloop](https://github.com/Kabya55/hireloop)
+## Live Link
+https://hireloop-three-ashen.vercel.app
+
+## Picture
+<img width="2409" height="1130" alt="Screenshot_3" src="https://github.com/user-attachments/assets/26b61f1b-3f61-41ba-8539-a7fb7bebc676" />
+
 
 ## Features (Proposed)
 - User Authentication (Job Seekers & Employers)
