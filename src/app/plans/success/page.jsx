@@ -5,6 +5,11 @@ import { CircleCheckFill, Envelope, ArrowLeft } from "@gravity-ui/icons";
 import { stripe } from "@/lib/stripe";
 import { createSubscription } from "@/lib/actions/subscriptions";
 
+export const metadata = {
+  title: "Subscription Success",
+  description: "Your payment was processed successfully! Welcome to your upgraded Hireloop plan.",
+};
+
 export default async function Success({ searchParams }) {
   const { session_id } = await searchParams;
 

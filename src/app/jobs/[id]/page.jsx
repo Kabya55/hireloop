@@ -9,6 +9,27 @@ import {
 import { getJobById } from "@/lib/api/jobs";
 import Image from "next/image";
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const job = await getJobById(id);
+
+  if (!job) {
+    return {
+      title: "Job Not Found",
+      description: "This job listing could not be found or is no longer active.",
+    };
+  }
+
+  const title = job.jobTitle || job.title || "Job Position";
+  const company = job.companyName || job.company || "Hireloop";
+  const desc = job.responsibilities || job.requirements || `Apply for the ${title} position at ${company} on Hireloop.`;
+
+  return {
+    title: `${title} at ${company}`,
+    description: desc.length > 155 ? desc.substring(0, 152) + "..." : desc,
+  };
+}
+
 const Page = async ({ params }) => {
   const { id } = await params;
   const job = await getJobById(id);

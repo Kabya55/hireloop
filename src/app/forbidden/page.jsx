@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import { Lock } from '@gravity-ui/icons';
 
+export const metadata = {
+  title: "Access Forbidden",
+  description: "Access Denied: You do not have the required permissions to view this page.",
+};
+
 export default function ForbiddenPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 dark:bg-slate-900">

@@ -1,6 +1,11 @@
 import JobListingContainer from "@/components/jobs/JobListingContainer";
 import { getJobs } from "@/lib/api/jobs";
 
+export const metadata = {
+  title: "Browse Jobs",
+  description: "Explore open job positions on Hireloop. Search by title, type, category, or location.",
+};
+
 export default async function Page({ searchParams }) {
   const filters = await searchParams;
   const filterObj = {

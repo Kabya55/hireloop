@@ -1,6 +1,11 @@
 import CompanyTable from "@/components/dashboard/CompanyTable";
 import { getCompanys } from "@/lib/api/companies";
 
+export const metadata = {
+  title: "Manage Companies",
+  description: "Review and manage companies registered on Hireloop.",
+};
+
 const AdminCompaniesPage = async () => {
   const companies = await getCompanys();
 

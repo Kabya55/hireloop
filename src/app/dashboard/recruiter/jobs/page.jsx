@@ -1,6 +1,11 @@
 import { getLoggedInRecruiterCompany } from "@/lib/api/companies";
 import { getCompanyJobs } from "@/lib/api/jobs";
 import { Table, Chip, Button, Tooltip } from "@heroui/react";
+
+export const metadata = {
+  title: "Manage Jobs",
+  description: "View, update, and manage your current job listings on Hireloop.",
+};
 // Assuming Gravity Icons maps to standard lucide equivalents; adjust paths if using a custom package
 import { Eye, Edit2, Trash2 } from "lucide-react";
 

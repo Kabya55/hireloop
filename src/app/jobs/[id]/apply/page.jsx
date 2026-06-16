@@ -2,6 +2,26 @@ import { getUserSession } from "@/lib/core/session";
 import { redirect } from "next/navigation";
 import { getJobById } from "@/lib/api/jobs";
 import JobApply from "./JobApply";
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const job = await getJobById(id);
+
+  if (!job) {
+    return {
+      title: "Apply for Job",
+      description: "Submit your job application on Hireloop.",
+    };
+  }
+
+  const title = job.jobTitle || job.title || "Job Position";
+  const company = job.companyName || job.company || "";
+
+  return {
+    title: `Apply for ${title} ${company ? `at ${company}` : ""}`,
+    description: `Complete and submit your application for the ${title} role on Hireloop.`,
+  };
+}
 import { getApplicationsByApplicent } from "@/lib/api/applications";
 import Link from "next/link";
 import { getPlanById } from "@/lib/api/plans";

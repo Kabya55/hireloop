@@ -31,10 +31,6 @@ export default function Navbar() {
       href: "/jobs",
     },
     {
-      label: "Companies",
-      href: "/companies",
-    },
-    {
       label: "Pricing",
       href: "/plans",
     },
@@ -161,9 +157,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`overflow-hidden transition-all duration-300 md:hidden ${
-            isMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`overflow-hidden transition-all duration-300 md:hidden ${isMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="mb-4 rounded-2xl border border-white/10 bg-black/90 p-4 backdrop-blur-xl">
             <ul className="space-y-3">
